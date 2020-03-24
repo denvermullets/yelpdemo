@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# TODO
+* /RESTAURANTS/
+* index.html.erb
+* edit.html.erb
+* show.html.erb
+* new.html.erb
+* _form.html.erb
+
+* ? - restaurants.css.scss
+
