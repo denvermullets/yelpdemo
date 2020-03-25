@@ -1,0 +1,21 @@
+<h1>This is a list of restaurants</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Website</th>
+    </tr>
+
+    <% @restaurants.each do |resty| %>
+        <tr>
+            <td><%= resty.name %></td>
+            <td><%= resty.address %></td>
+            <td><%= resty.phone %></td>
+            <td><%= resty.website %></td>
+        </tr>
+    <% end %>
+</table>
+
+<%= link_to 'Add New Restaurant', new_restaurant_path %>
