@@ -11,8 +11,9 @@ class RestaurantsController < ApplicationController
         @restaurant = Restaurant.new
     end
 
-    # def edit
-    # end
+    def edit
+        @restaurant = Restaurant.find(params[:id])
+    end
 
     def create
         # render plain: params[:restaurant].inspect
@@ -26,8 +27,15 @@ class RestaurantsController < ApplicationController
         end 
     end 
 
-    # def update
-    # end
+    def update
+        @restaurant = Restaurant.find(params[:id])
+
+        if @restaurant.update(restaurant_params)
+            redirect_to @restaurant
+        else 
+            render 'edit'
+        end
+    end
 
     # def destroy
     # end

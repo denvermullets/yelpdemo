@@ -1,7 +1,7 @@
-<h1>this is a form for new restaurants</h1>
+<h1>edit-ya</h1>
 
 <%# error handling for form submissions %>
-<%= form_with scope: :restaurant, url: restaurants_path, local: true do |form| %>
+<%= form_with(model: @restaurant, local: true) do |form| %>
   <% if @restaurant.errors.any? %>
     <h2>
       <%= pluralize(@restaurant.errors.count, "error") %>
